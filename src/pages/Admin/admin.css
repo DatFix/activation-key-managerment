@@ -1,0 +1,110 @@
+.admin-container {
+    display: flex;
+    height: 100vh;
+    background-color: #0D1826;
+    color: #00ffff;
+}
+
+.admin-sidebar {
+    width: 250px;
+    padding: 20px;
+    background: repeating-linear-gradient(-45deg, rgba(5, 175, 242, 0.1), rgba(5, 175, 242, 0.1) 3px, rgba(5, 199, 242, 0.02) 3px, rgba(5, 199, 242, 0.02) 10px), linear-gradient(135deg, transparent, rgba(5, 199, 242, 0.2));
+    border-right: 2px solid rgba(0, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logout-button {
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.4);
+    border: none;
+    border-radius: 5px;
+    color: #ff4444;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.admin-sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.admin-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-tabs button {
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-tabs button:hover,
+.admin-tabs button.active {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+.admin-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.admin-content h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+
+
+th {
+    background-color: rgba(0, 255, 255, 0.1);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 255, 0.05);
+}
+
+.action button{
+    margin: 0 0.5rem;
+}

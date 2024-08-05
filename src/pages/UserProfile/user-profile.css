@@ -1,0 +1,203 @@
+/* src/components/user-profile.css */
+h1, h2, h3, h4, h5, p {
+    color: #00ffff;
+}
+
+.profile-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-open {
+    transform: translateX(0);
+}
+
+.sidebar-closed {
+    transform: translateX(-80px);
+}
+
+.section-avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background: repeating-linear-gradient(-45deg, rgba(5, 175, 242, 0.1), rgba(5, 175, 242, 0.1) 3px, rgba(5, 199, 242, 0.02) 3px, rgba(5, 199, 242, 0.02) 10px), linear-gradient(135deg, transparent, rgba(5, 199, 242, 0.2));
+    border-right: 2px solid rgba(0, 255, 255, 0.3);
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.avatar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.avatar-content .title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.avatar-content .title h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.section-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+.section-info {
+    padding: 20px;
+}
+
+.section-info h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.fullname {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.lastname,
+.firstname {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    text-transform: uppercase;
+    color: #00ffff;
+}
+
+label {
+    text-transform: capitalize;
+    padding: 10px 0;
+    display: block;
+    color: #00ffff;
+}
+
+.active-key,
+.username-password,
+.email-phone {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-container,
+.password-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.username-password,
+.email-phone {
+    display: flex;
+    gap: 20px;
+}
+
+.username-password .input-field,
+.email-phone .input-field {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ffff;
+    background-color: transparent;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 1px solid #00ffff;
+    outline: none;
+}
+
+/* General button styles */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 200px;
+}
+
+/* Styles for buttons inside .avatar */
+.avatar button {
+    background-color: rgba(0, 255, 255, 0.8);
+    color: black;
+}
+
+.avatar button:hover {
+    background-color: #00ffff;
+    transform: scale(1.05);
+}
+
+/* Specific styles for the logout button */
+.logout-button {
+    margin-top: auto;
+    background-color: rgba(255, 0, 0, 0.4);
+    color: white;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.logout-button:hover {
+    background-color: rgb(255, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Styles for buttons in password-container and active-key */
+.password-container button,
+.active-key button {
+    margin-left: 10px;
+    width: auto;
+    padding: 13px 15px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 255, 255, 0.8);
+    color: black;
+}
+
+.password-container button:hover,
+.active-key button:hover {
+    background-color: #00ffff;
+    transform: scale(1.05);
+}
