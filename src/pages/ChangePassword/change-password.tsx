@@ -69,7 +69,7 @@ const ChangePasswordForm: React.FC = () => {
     }
 
     try {
-      const response = await fetch('https://software-authentication.vercel.app/auth/change-password', {
+      const response = await fetch('https://sma2.vercel.app/auth/change-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const ChangePasswordForm: React.FC = () => {
       });
 
       toast.success('Đổi mật khẩu thành công');
-      navigate('/user-profile');
+      handleNavigate();
     } catch (error: any) {
       toast.error(error.message);
     }
@@ -99,8 +99,13 @@ const ChangePasswordForm: React.FC = () => {
   const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const validatePassword = (password: string) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,20}$/.test(password);
 
-  const handleNavigate = (direction: string) => {
-    navigate(`/${direction}`); 
+  const user_id = localStorage.getItem('user_id');
+
+  const handleNavigate = () => {
+    const componentType = user_id  ? 'user' : 'admin';
+    setTimeout(() => {
+      navigate('/dashboard', { state: { componentType } });
+    }, 3000);
   };
 
   return (
@@ -161,7 +166,7 @@ const ChangePasswordForm: React.FC = () => {
           </div>
 
           <div className="forget-password">
-            <small><b onClick={() => handleNavigate('user-profile')}>Quay lại trang người dùng</b></small>
+            <small><b onClick={handleNavigate}>Quay lại trang người dùng</b></small>
           </div>
           <Link to="#" id="register-button" onClick={handleSubmit}>
             <span></span>
