@@ -77,12 +77,12 @@ const LoginForm: React.FC = () => {
         localStorage.setItem("user_id", data.id);
         setTimeout(() => {
           navigate("/dashboard", { state: { componentType: "user" } });
-          // window.location.href = "/dashboard";
+          window.location.href = "/dashboard";
         }, 3000);
       } else if (data.message === "Admin logged in successfully") {
         setTimeout(() => {
           navigate("/dashboard", { state: { componentType: "admin" } });
-          // window.location.href = "/dashboard";
+          window.location.href = "/dashboard";
         }, 3000);
       } else {
         console.error("Unexpected login response:", data.message);
