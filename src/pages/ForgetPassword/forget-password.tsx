@@ -4,6 +4,7 @@ import { Errors } from "../../types/acccount";
 import { toast } from "react-toastify";
 import ToastContainer from "../../components/Toast/toast";
 import CyberLoading from "../../components/Loading/loading";
+import logo from "../../assets/logo.png";
 
 const ForgetPasswordForm: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -33,7 +34,7 @@ const ForgetPasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://sma2.vercel.app/auth/forgot-password",
+        "https://software-authentication.onrender.com/auth/forgot-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -71,7 +72,10 @@ const ForgetPasswordForm: React.FC = () => {
         <CyberLoading />
       ) : (
         <>
-          <h1 className="title">Khôi Phục Mật Khẩu</h1>
+         <div className="logo">
+            <img src={logo} alt="" />
+          </div>
+          <h1 className="title">SM2A</h1>
           <div className="login-box">
             <h2>Nhập Email Tài Khoản</h2>
             <form id="form-login" onSubmit={handleSubmit}>

@@ -63,9 +63,14 @@ h1, h2, h3, h4, h5, p {
     border-radius: 50%;
     border: 3px solid #00ffff;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    margin-bottom: 30px;
 }
 
+
+.avatar p{
+    font-size: 1.1rem;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    font-weight: 600;
+}
 
 
 .section-info {
@@ -152,23 +157,32 @@ input:focus {
 }
 
 
-.password-container button,
 .active-key button {
-    margin-left: 10px;
-    border: 1px solid rgba(0, 255, 255, 0.8) !important;
-    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
-    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    padding: 0.9rem;  
     color: #00ffff;
-    padding: 1rem;
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: none;
+    background: transparent;
     cursor: pointer;
+    margin-top: auto;
+    margin-left: 0.2rem;
 }
 
-.password-container button:hover,
 .active-key button:hover {
-    background-color: rgba(0, 255, 255, 0.3);
-    scale: 1.1;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 5px #00ffff,
+                0 0 25px #00ffff,
+                0 0 50px #00ffff,
+                0 0 100px #00ffff;
 }
 
 .cyber-button{

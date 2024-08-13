@@ -5,6 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import ToastContainer from "../../components/Toast/toast";
 import CyberLoading from "../../components/Loading/loading";
+import logo from "../../assets/logo.png";
 
 const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState<FormDataLogin>({
@@ -38,6 +39,9 @@ const LoginForm: React.FC = () => {
     if (!validatePassword(password))
       newErrors.password = "Mật khẩu phải có ít nhất 6 ký tự.";
 
+    if (!validatePassword(emailOrUsername))
+      newErrors.emailOrUsername = "Email hoặc Username không được trống";
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
@@ -46,7 +50,7 @@ const LoginForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://sma2.vercel.app/auth/login", {
+      const response = await fetch("https://software-authentication.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ emailOrUsername, password }),
@@ -89,8 +93,11 @@ const LoginForm: React.FC = () => {
         toast.success(data.message);
       }, 1000);
     } catch (error: any) {
-      toast.error(error.message);
-      window.location.href = "/";
+      setTimeout(() => {
+        toast.error(error.message);
+      }, 500);
+      // window.location.href = "/";
+      navigate("/")
       console.log(error.message);
     } finally {
       setIsLoading(false);
@@ -113,6 +120,9 @@ const LoginForm: React.FC = () => {
         <CyberLoading />
       ) : (
         <>
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
           <h1 className="title">SM2A</h1>
           <div className="login-box">
             <h2>ĐĂNG NHẬP</h2>
@@ -127,8 +137,8 @@ const LoginForm: React.FC = () => {
                   required
                 />
                 <label htmlFor="username">Email | Username</label>
-                {errors.email && (
-                  <small className="error-message">{errors.email}</small>
+                {errors.emailOrUsername && (
+                  <small className="error-message">{errors.emailOrUsername}</small>
                 )}
               </div>
 

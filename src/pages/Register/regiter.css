@@ -13,12 +13,13 @@ body {
 .title {
   color: aqua;
   text-align: center;
-  margin-top: 2.4rem;
+  margin: 0;
+  padding: 0;
 }
 
 .login-box {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   width: 500px;
   padding: 40px;
@@ -36,6 +37,16 @@ body {
   padding: 0;
   color: aqua;
   text-align: center;
+}
+
+.logo{
+  text-align: center;
+  padding: 2rem 0 0 0;
+}
+
+.logo img{
+  width: 3rem;
+ 
 }
 
 .login-box .user-box {

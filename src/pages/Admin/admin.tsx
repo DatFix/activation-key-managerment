@@ -6,7 +6,7 @@ import { FiLogOut } from "react-icons/fi";
 import "./admin.css";
 import { toast } from "react-toastify";
 import ToastContainer from "../../components/Toast/toast";
-import { useNavigate  } from "react-router-dom";
+import logo from '../../../public/logo.png'
 
 interface User {
   _id: string;
@@ -27,13 +27,12 @@ const Admin: React.FC = () => {
   const [userList, setUserList] = useState<User[]>([]);
   // const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
-  const navigate = useNavigate();
 
   const fetchUsers = async () => {
     // setLoading(true);
     try {
       const response = await axios.get(
-        "https://sma2.vercel.app/users"
+        "https://software-authentication.onrender.com/users"
       );
       setUserList(response.data);
       setErrors({});
@@ -63,7 +62,11 @@ const Admin: React.FC = () => {
     <>
       <div className="admin-container">
         <div className="admin-sidebar">
+        <div className="logo-admin">
+          <img src={logo} alt="LogoSeadragon" />
+          </div>
           <h2>Admin</h2>
+         
           <div className="admin-tabs">
             <button
               className={activeTab === "users" ? "active" : ""}

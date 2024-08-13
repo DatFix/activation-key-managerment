@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ToastContainer from "../../components/Toast/toast";
 import CyberLoading from "../../components/Loading/loading";
+import logo from "../../assets/logo.png";
 
 interface Errors {
   otp?: string;
@@ -105,7 +106,7 @@ const ResetPasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://sma2.vercel.app/auth/reset-password",
+        "https://software-authentication.onrender.com/auth/reset-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -149,7 +150,10 @@ const ResetPasswordForm: React.FC = () => {
         <CyberLoading />
       ) : (
         <>
-          <h1 className="title">Khôi Phục Mật Khẩu</h1>
+         <div className="logo">
+            <img src={logo} alt="" />
+          </div>
+          <h1 className="title">SM2A</h1>
           <div className="login-box">
             <h2>Cấp Lại Mật Khẩu</h2>
             <form id="reset-password-form" onSubmit={handleSubmit}>

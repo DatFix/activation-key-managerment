@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import ToastContainer from "../../components/Toast/toast";
 import CyberLoading from "../../components/Loading/loading";
+import logo from "../../assets/logo.png";
 
 const RegisterForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -59,7 +60,7 @@ const RegisterForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://sma2.vercel.app/auth/register", {
+      const response = await fetch("https://software-authentication.onrender.com/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -127,6 +128,9 @@ const RegisterForm: React.FC = () => {
         <CyberLoading />
       ) : (
         <>
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
           <h1 className="title">SM2A</h1>
           <div className="login-box">
             <h2>ĐĂNG KÝ</h2>

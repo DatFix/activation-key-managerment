@@ -60,7 +60,7 @@ const Profile: React.FC = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://sma2.vercel.app/user/${user_id}`
+          `https://software-authentication.onrender.com/user/${user_id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -136,6 +136,11 @@ const Profile: React.FC = () => {
 
               <div className="avatar">
                 <img src={avatar} alt="Avatar" />
+                {user?.is_active ? (
+                  <p style={{color: "yellow"}}>ĐÃ KÍCH HOẠT</p>
+                ):(
+                  <p style={{ color: "rgb(0, 191, 26)" }}>CHƯA KÍCH HOẠT</p>
+                )}
                 <button
                   className="cyber-button"
                   onClick={handleNavigateToChangePassword}
@@ -167,6 +172,7 @@ const Profile: React.FC = () => {
                 <div className="firstname">{user.firstname}</div>
               </div>
             )}
+            
             <div className="username-password">
               <div className="input-field">
                 <label>Tài khoản</label>
