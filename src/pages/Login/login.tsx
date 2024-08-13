@@ -77,11 +77,13 @@ const LoginForm: React.FC = () => {
         localStorage.setItem("user_id", data.id);
         setTimeout(() => {
           navigate("/dashboard", { state: { componentType: "user" } });
-        }, 0);
+          window.location.href = "/dashboard";
+        }, 3000);
       } else if (data.message === "Admin logged in successfully") {
         setTimeout(() => {
           navigate("/dashboard", { state: { componentType: "admin" } });
-        }, 0);
+          window.location.href = "/dashboard";
+        }, 3000);
       } else {
         console.error("Unexpected login response:", data.message);
         alert("Đăng nhập thành công, nhưng có lỗi xảy ra. Vui lòng thử lại.");
