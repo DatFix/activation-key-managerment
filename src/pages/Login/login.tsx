@@ -89,11 +89,15 @@ const LoginForm: React.FC = () => {
         }, 3000);
       } else {
         console.error("Unexpected login response:", data.message);
-        alert("Đăng nhập thành công, nhưng có lỗi xảy ra. Vui lòng thử lại.");
+        // alert("Đăng nhập thành công, nhưng có lỗi xảy ra. Vui lòng thử lại.");
       }
 
       setTimeout(() => {
-        toast.success(data.message);
+        if(data.message == "User logged in successfully"){
+          toast.success("Đăng nhập thành công");
+        }else{
+          toast.success(data.message);
+        }
       }, 1000);
     } catch (error: any) {
       toast.error(error.message);
