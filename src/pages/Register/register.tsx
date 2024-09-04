@@ -91,7 +91,11 @@ const RegisterForm: React.FC = () => {
 
       navigate("/");
       setTimeout(() => {
-        toast.success(data.message);
+        if(data.message == 'User created successfully'){
+          toast.success("Đăng ký thành công");
+        }else{
+           toast.success(data.message);
+        }
       }, 1000);
     } catch (error: any) {
       // Show error toast
