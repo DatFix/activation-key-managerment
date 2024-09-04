@@ -178,8 +178,7 @@ const Document = () => {
           <h3 id="section4-2">2. Đăng nhập tài khoản</h3>
           <p>
             - Sau khi khích hoạt thành công sẽ được chuyển hướng đến trang đăng
-            nhập, tại đây người dùng phải nhập vào tài khoản đã đăng ký. *Lưu ý:
-            1 tài khoản chỉ được sử dụng trên 1 thiết bị.
+            nhập, tại đây người dùng phải nhập vào tài khoản đã đăng ký. 
           </p>
 
           <img src={Image14} alt="Đăng nhập tài khoản" />
