@@ -50,11 +50,14 @@ const LoginForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://software-authentication.onrender.com/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ emailOrUsername, password }),
-      });
+      const response = await fetch(
+        "https://software-authentication.onrender.com/auth/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ emailOrUsername, password }),
+        }
+      );
 
       if (!response.ok) {
         const errData = await response.json();
@@ -93,11 +96,14 @@ const LoginForm: React.FC = () => {
         toast.success(data.message);
       }, 1000);
     } catch (error: any) {
+      toast.error(error.message);
+
+      // Delay navigation to allow the toast to be visible
       setTimeout(() => {
-        toast.error(error.message);
-      }, 500);
-      // window.location.href = "/";
-      navigate("/")
+        window.location.href = "/";
+      }, 2000);
+
+
       console.log(error.message);
     } finally {
       setIsLoading(false);
@@ -138,7 +144,9 @@ const LoginForm: React.FC = () => {
                 />
                 <label htmlFor="username">Email | Username</label>
                 {errors.emailOrUsername && (
-                  <small className="error-message">{errors.emailOrUsername}</small>
+                  <small className="error-message">
+                    {errors.emailOrUsername}
+                  </small>
                 )}
               </div>
 

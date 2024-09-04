@@ -104,6 +104,10 @@ const ChangePasswordForm: React.FC = () => {
       handleNavigate();
     } catch (error: any) {
       toast.error(error.message);
+      
+      setTimeout(() => {
+        window.location.href = '/change-password'
+      }, 3000);
     }
   };
 

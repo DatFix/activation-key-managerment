@@ -15,11 +15,11 @@
     position: relative;
   }
   
-  .modal-close {
+  .modal-close-delete {
     position: absolute;
-    top: -17rem;
+    top: -6rem;
     color: #fff;
-    right: -13rem;
+    right: -12rem;
     border: none;
     background: none;
     font-size: 20px;

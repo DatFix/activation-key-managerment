@@ -9,6 +9,7 @@ import ToastContainer from "../../components/Toast/toast";
 import logo from "../../../public/logo.png";
 import ModalUpadate from "../../components/Update/update";
 import ModalDelete from "../../components/Delete/delete";
+import { useNavigate } from "react-router-dom";
 
 interface User {
   _id: string;
@@ -35,6 +36,7 @@ const Admin: React.FC = () => {
   const [editingUser, setEditingUser] = useState<User | null>(null);
   const [showUpdateToast, setShowUpdateToast] = useState(false);
   const [showDeleteToast, setShowDeleteToast] = useState(false);
+  const navigate = useNavigate();
 
   const openModal = (user: User) => {
     setEditingUser(user);
@@ -75,10 +77,13 @@ const Admin: React.FC = () => {
   }, []);
 
   const handleLogout = () => {
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 1000);
     toast.success("Đăng xuất thành công.");
+  
+    // Navigate to home page and reload
+    setTimeout(() => {
+      navigate('/', { replace: true });
+      window.location.reload();
+    }, 2000);
     localStorage.removeItem("user_id");
     sessionStorage.removeItem("isLogin");
   };
@@ -189,9 +194,9 @@ const Admin: React.FC = () => {
                       <td>{user.username}</td>
                       <td>{user.activate_key}</td>
                       {user.is_active ? (
-                        <td style={{ color: "yellow" }}>Đã kích hoạt</td>
+                        <td style={{ color: "rgb(62, 247, 88)" }}>Đã kích hoạt</td>
                       ) : (
-                        <td style={{ color: "rgb(0, 191, 26)" }}>
+                        <td style={{ color: "yellow" }}>
                           Chưa kích hoạt
                         </td>
                       )}

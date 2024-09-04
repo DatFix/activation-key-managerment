@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaRegCopy } from "react-icons/fa";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./user-profile.css";
 import { Errors } from "../../types/acccount";
 import { toast } from "react-toastify";
@@ -101,16 +101,25 @@ const Profile: React.FC = () => {
     navigate("/change-password");
   };
 
+  const handleToDocument = () => {
+    navigate("/document")
+  }
+
   const handleLogout = () => {
-    setTimeout(() => {
-      navigate("/");
-      window.location.href = '/';
-    }, 3000);
+    // Remove items from localStorage and sessionStorage
     localStorage.removeItem("user_id");
     localStorage.removeItem("avatar");
-    sessionStorage.removeItem('isLogin')
+    sessionStorage.removeItem("isLogin");
+  
+    // Show success message
     toast.success("Đăng xuất thành công.");
-  };
+  
+    // Navigate to home page and reload
+    setTimeout(() => {
+      navigate('/', { replace: true });
+      window.location.reload();
+    }, 3000);
+  }
 
   if (loading) return <CyberLoading />;
   if (errors.message) return <p aria-live="polite">Error: {errors.message}</p>;
@@ -137,9 +146,9 @@ const Profile: React.FC = () => {
               <div className="avatar">
                 <img src={avatar} alt="Avatar" />
                 {user?.is_active ? (
-                  <p style={{color: "yellow"}}>ĐÃ KÍCH HOẠT</p>
-                ):(
-                  <p style={{ color: "rgb(0, 191, 26)" }}>CHƯA KÍCH HOẠT</p>
+                  <p style={{ color: "rgb(62, 247, 88)" }}>ĐÃ KÍCH HOẠT</p>
+                ) : (
+                  <p style={{ color: "yellow" }}>CHƯA KÍCH HOẠT</p>
                 )}
                 <button
                   className="cyber-button"
@@ -151,9 +160,18 @@ const Profile: React.FC = () => {
                   <span></span>
                   Đổi mật khẩu
                 </button>
+                <div className="admin-tabs">
+                  <button
+                    className={"active"}
+                    style={{margin: "1rem 0", justifyContent:"center"}}
+                    onClick={()=> handleToDocument()}
+                  >
+                    Hướng dẫn sử dụng SM2A
+                  </button>
+                </div>
               </div>
             </div>
-            <button className="cyber-button" onClick={handleLogout}>
+            <button className="cyber-button" onClick={() =>handleLogout()}>
               <span></span>
               <span></span>
               <span></span>
@@ -172,7 +190,7 @@ const Profile: React.FC = () => {
                 <div className="firstname">{user.firstname}</div>
               </div>
             )}
-            
+
             <div className="username-password">
               <div className="input-field">
                 <label>Tài khoản</label>

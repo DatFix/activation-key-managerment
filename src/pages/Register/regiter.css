@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0; 
   font-family: "Chakra Petch", sans-serif;
   background-color: #0D1826 !important;
   background: repeating-linear-gradient(-45deg, rgba(5, 175, 242, 0.1), rgba(5, 175, 242, 0.1) 3px, rgba(5, 199, 242, 0.02) 3px, rgba(5, 199, 242, 0.02) 10px), linear-gradient(135deg, transparent, rgba(5, 199, 242, 0.2));
@@ -165,7 +165,7 @@ body {
 }
 
 #register-button {
-  display: inline-block;
+  display: flex;
   float: right;
   margin-top: 20px;
 }

@@ -5,6 +5,7 @@ import ForgetPassword from "../pages/ForgetPassword/forget-password";
 import ResetPassword from "../pages/ResetPassword/reset-password";
 import ChangePassWord from "../pages/ChangePassword/change-password";
 import Dashboard from "../pages/Dashboard/dashboard";
+import Document from "../pages/Document/document";
 
 
 const AppRouter = () => {
@@ -26,6 +27,7 @@ const AppRouter = () => {
               <Route path="/dashboard" element={<Dashboard />} />
             </>
           )}
+           <Route path="/document" element={<Document />} />
         </Routes>
       </Router>
     </>
