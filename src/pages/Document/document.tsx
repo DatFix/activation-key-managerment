@@ -229,7 +229,7 @@ const Document = () => {
         <section id="section6">
           <h2>VI. Các Chức Năng</h2>
 
-          <h3 id="section6-1">Tương tác trong phần mềm được chia thành 4 loại chính:</h3>
+          <h3>Tương tác trong phần mềm được chia thành 4 loại chính:</h3>
           <h4>Tương tác cá nhân</h4>
           <h4>Tương tác bài viết</h4>
           <h4>Chức năng bạn bè</h4>
@@ -353,7 +353,7 @@ const Document = () => {
           <img src={Image27} alt="Tính năng đăng Reels" />
           <h5>Hình 27 Đọc thông báo</h5>
 
-          <h3>2. Tương tác bài viết</h3>
+          <h3 id="section6-2">2. Tương tác bài viết</h3>
 
           <h4>Tương tác bài viết nhóm:</h4>
           <p>
@@ -480,7 +480,7 @@ const Document = () => {
           <img src={Image31} alt="Tính năng tương tác bài viết trên Newsfeed" />
           <h5>Hình 31 Tính năng tương tác bài viết trên Newsfeed</h5>
 
-          <h3>3. Chức năng bạn bè</h3>
+          <h3 id="section6-3">3. Chức năng bạn bè</h3>
 
           <h4>Huỷ kết bạn:</h4>
           <p>
@@ -578,7 +578,7 @@ const Document = () => {
           <img src={Image39} alt="Tính năng tham gia nhóm theo gợi ý" />
           <h5>Hình 39 Tính năng tham gia nhóm theo gợi ý</h5>
 
-          <h3>4. Chức năng Seeding</h3>
+          <h3 id="section6-4">4. Chức năng Seeding</h3>
 
           <h4>4.1. Chia sẻ:</h4>
           <p>
@@ -738,9 +738,9 @@ const Document = () => {
         <section id="section7">
           <h2>VII. Chạy Kịch Bản Tương Tác Trên Phần Mềm</h2>
 
-          <h3>1. Tạo kịch bản và thêm các hành động</h3>
+          <h3 id="section7-1">1. Tạo kịch bản và thêm các hành động</h3>
 
-          <h4>1.1. Tạo kịch bản:</h4>
+          <h4 id="section7-1-1">1.1. Tạo kịch bản:</h4>
           <p>
             - Bước 1: Nhấn chọn vào mục <strong>Cài đặt tương tác</strong> ở
             giao diện chính của phần mềm.
@@ -761,7 +761,7 @@ const Document = () => {
           <img src={Image49} alt="Nhập tên kịch bản" />
           <h5>Hình 49 Tạo kịch bản</h5>
 
-          <h4>1.2. Thêm hành động cho kịch bản:</h4>
+          <h4 id="section7-1-2">1.2. Thêm hành động cho kịch bản:</h4>
           <p>
             - Bước 1: Tại trang <strong>Quản lý kịch bản</strong>, người dùng
             nhấn chuột vào kịch bản vừa tạo và tiếp tục nhấn chuột phải, sau đó
@@ -784,7 +784,7 @@ const Document = () => {
           <img src={Image52} alt="Thêm hành động thành công cho kịch bản" />
           <h5>Hình 52 Thêm hành động thành công cho kịch bản</h5>
 
-          <h3>2. Chạy kịch bản</h3>
+          <h3 id="section7-2">2. Chạy kịch bản</h3>
           <p>
             - Bước 1: Ở mục <strong>Quản lý mạng xã hội</strong>, chọn option{" "}
             <strong>Facebook</strong>.
@@ -828,7 +828,7 @@ const Document = () => {
           <img src={Image57} alt="Báo cáo và báo cáo tương tác" />
           <h5>Hình 57 Báo cáo và báo cáo tương tác</h5>
 
-          <h3>1. Báo cáo</h3>
+          <h3 id="section8-1">1. Báo cáo</h3>
           <p>
             - Khi nhấn vào Báo cáo, người dùng sẽ nhận được 1 file excel trên
             desktop với thông tin của các tài khoản và thời gian lần cuối tương
@@ -841,7 +841,7 @@ const Document = () => {
           />
           <h5>Hình 58 Thông tin và thời gian lần cuối tương tác của tài khoản</h5>
 
-          <h3>2. Báo cáo tương tác</h3>
+          <h3 id="section8-2">2. Báo cáo tương tác</h3>
           <p>
             - Khi người dùng nhấn vào Báo cáo tương tác, người dùng sẽ nhận được
             1 file excel trên desktop với thông tin chi tiết về các hành động,
