@@ -60,7 +60,29 @@ import Image56 from "../../assets/image_doc/image56.png";
 import Image57 from "../../assets/image_doc/image57.png";
 import Image58 from "../../assets/image_doc/image58.png";
 import Image59 from "../../assets/image_doc/image59.png";
-
+import Image60 from "../../assets/image_doc/image60.png";
+import Image61 from "../../assets/image_doc/image61.png";
+import Image62 from "../../assets/image_doc/image62.png";
+import Image63 from "../../assets/image_doc/image63.png";
+import Image64 from "../../assets/image_doc/image64.png";
+import Image65 from "../../assets/image_doc/image65.png";
+import Image66 from "../../assets/image_doc/image66.png";
+import Image67 from "../../assets/image_doc/image67.png";
+import Image68 from "../../assets/image_doc/image68.png";
+import Image69 from "../../assets/image_doc/image69.png";
+import Image70 from "../../assets/image_doc/image70.png";
+import Image71 from "../../assets/image_doc/image71.png";
+import Image72 from "../../assets/image_doc/image72.png";
+import Image73 from "../../assets/image_doc/image73.png";
+import Image74 from "../../assets/image_doc/image74.png";
+import Image75 from "../../assets/image_doc/image75.png";
+import Image76 from "../../assets/image_doc/image76.png";
+import Image77 from "../../assets/image_doc/image77.png";
+import Image78 from "../../assets/image_doc/image78.png";
+import Image79 from "../../assets/image_doc/image79.png";
+import Image80 from "../../assets/image_doc/image80.png";
+import Image81 from "../../assets/image_doc/image81.png";
+import Image82 from "../../assets/image_doc/image82.png";
 
 
 const Document = () => {
@@ -72,99 +94,195 @@ const Document = () => {
         <div className="document">
         <h1>HƯỚNG DẪN SỬ DỤNG PHẦN MỀM TỰ ĐỘNG HOÁ MẠNG XÃ HỘI</h1>
         <section id="section1">
-          <h2>I. Đăng Ký Tài Khoản Cho Phần Mềm</h2>
+          <h2>I. Đăng Ký Và Đăng Nhập</h2>
 
-          <h3 id="section1-1">1. Truy cập đường dẫn</h3>
+          <h3 id="section1-1">1. Đăng nhập</h3>
           <p>
-            - Truy cập đường link:{" "}
+          - Bước 1 Truy cập đường link:{" "}
             <Link
-              to="https://sm2a.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+            to="https://sm2a.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             >
-              https://sm2a.vercel.app/
-            </Link>{" "}
-            để vào trang đăng nhập hoặc đăng ký tài khoản
+            https://sm2a.vercel.app/
+          </Link>{" "}
+          trên trình duyệt để vào trang chủ phần mềm SM2A.
           </p>
 
           <img src={Image1} alt="Trang đăng nhập" />
-          <h5>Hình 1 Trang đăng nhập</h5>
+          <h5>Hình 1 Giao diện trang đăng nhập</h5>
 
+          <p>
+          -	Bước 2: Sử dụng tài khoản đã đăng ký tại trang chủ để đăng nhập vào trang quản lý thông tin người dùng phần mềm.
+          </p>
           <img src={Image2} alt="Trang đăng ký" />
           <h5>Hình 2 Trang đăng ký</h5>
 
-          <h3 id="section1-2">2. Đăng ký/ đăng nhập tài khoản</h3>
+          
           <p>
-            - Đăng nhập tài khoản nếu đã có hoặc đăng ký tài khoản nếu chưa có
-            để hướng đến trang Người dùng. Nếu đăng ký lần đầu tiên và đăng nhập
-            thì mặc định tài khoản sẽ chưa được kích hoạt. Người dùng có thể lấy
-            được mã kích hoạt sau khi đăng nhập thành công hoặc lấy mã từ địa
-            chỉ email đã đăng ký tài khoản.
+          -	Bước 3: Nhấn chọn nút “Đăng nhập”.
+          </p>
+          <img src={Image3} alt="Trang đăng ký" />
+          <h5>Hình 3 Nhấn chọn đăng nhập</h5>
+
+          
+          <p>
+          -	Bước 4: Sau khi đăng nhập thành công thì hệ thống sẽ hiển thị thông báo và hiển thị giao diện trang quản lý thông tin người dùng phần mềm.
+          </p>
+          <img src={Image4} alt="Trang đăng ký" />
+          <h5>Hình 4 Giao diện tài khoản người dùng</h5>
+
+          <h3 id="section1-2">2. Đăng ký</h3>
+          <p>
+            - Bước 1: Nhấp chọn vào đường dẫn đăng ký trên biểu mẫu đăng nhập, giao diện sẽ điều hướng đến trang đăng ký.
           </p>
 
-          <img src={Image3} alt="Trang người dùng" />
-          <h5>Hình 3 Trang người dùng</h5>
+          <img src={Image5} alt="Trang người dùng" />
+          <h5>Hình 5 Giao diện trang đăng ký</h5>
+
+          <p>
+            - Bước 2: Nhập thông tin vào các trường dữ liệu được yêu cầu trên biểu mẫu.
+          </p>
+          <img src={Image6} alt="Trang người dùng" />
+          <h5>Hình 6 Nhập thông tin đăng ký</h5>
+
+          <p>
+            - Bước 3: Nhấn chọn nút “Đăng ký”.
+          </p>
+          <img src={Image7} alt="Trang người dùng" />
+          <h5>Hình 7 Nhấn chọn nút đăng ký</h5>
+
+          <p>
+            - Sau khi đăng ký thành công hệ thống sẽ hiển thị thông báo và trở về giao diện đăng nhập.
+          </p>
+          <img src={Image8} alt="Trang người dùng" />
+          <h5>Hình 8 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+          <p>* Lưu ý: Hệ thống sẽ tự động gửi mã kích hoạt phần mềm về địa chỉ email mà người dùng đã nhập khi đăng ký tài khoản.  </p>
+
         </section>
 
         <section id="section2">
-          <h2>II. Giải Nén Và Cài Đặt Môi Trường</h2>
+          <h2>II. Đổi mật khẩu và quên mật khẩu</h2>
+          <h3 id="section2-1">1. Đổi mật khẩu</h3>
+            <p>-	Khi người dùng có nhu cầu đổi mật khẩu mới cho tài khoản quản lý thông tin người dùng phần mềm thì có thể đăng nhập vào trang quản lý thông tin người dùng, sau đó tiến 	hành đổi mật khẩu theo các bước sau:</p>
+              <h4>Bước 1: Đăng nhập vào trang quản lý thông tin người dùng phần mềm.</h4>
+              <img src={Image9} alt="Trang người dùng" />
+              <h5>Hình 9 Giao diện đăng nhập sau khi đăng ký thành công</h5>
 
-          <h3 id="section2-1">1. Giải nén file phần mềm đã được cung cấp</h3>
-          <img src={Image4} alt="Giải nén phần mềm" />
-          <h5>Hình 4 Giải nén phần mềm</h5>
+              <h4>Bước 2: Nhấp chọn vào nút “Đổi mật khẩu” tại thanh điều hướng bên trái phía dưới hình ảnh đại diện mặc định. Hệ thống sẽ hiển thị giao diện đổi mật khẩu.</h4>
+              <img src={Image10} alt="Trang người dùng" />
+              <h5>Hình 10 Giao diện đăng nhập sau khi đăng ký thành công</h5>
 
-          <h3 id="section2-2">2. Cài đặt môi trường</h3>
-          <p>
-          -	Sau khi giải nén xong phần mềm vào thư mục đã giải nén và mở thư mục SETUP_ENV.
-          </p>
+              <h4>Bước 3: Tại đây, người dùng nhập thông tin vào các trường được yêu cầu trên biểu mẫu.</h4>
+              <img src={Image11} alt="Trang người dùng" />
+              <h5>Hình 11 Giao diện đăng nhập sau khi đăng ký thành công</h5>
 
-          <img src={Image5} alt="Chạy file setup để cài đặt môi trường" />
+              <h4>Bước 4: Nhấp chọn vào nút “Đặt lại mật khẩu”.</h4>
+              <img src={Image12} alt="Trang người dùng" />
+              <h5>Hình 12 Giao diện đăng nhập sau khi đăng ký thành công</h5>
 
-          <p>- Chạy file SM2A-SETUP-ENV1.exe </p>
-          <img src={Image6} alt="Chạy file setup để cài đặt môi trường" />
-          <h5>Hình 6 Chạy file SM2A-SETUP-ENV1.exe</h5>
+              <h4>Bước 5: Sau khi đổi mật khẩu thành công, hệ thống sẽ điều hướng người dùng về lại trang quản lý thông tin người dùng phần mềm. Đồng thời, hệ thống cũng gửi một nội dung 	thông báo đổi mật khẩu thành công về địa chỉ email mà người dùng đã nhập trên biểu mẫu đổi mật khẩu.</h4>
+              
 
-          <p>- Chạy tiếp file SM2A-SETUP-ENV2.exe  </p>
-          <img src={Image7} alt="Chạy tiếp file SM2A-SETUP-ENV2.exe " />
-          <h5>Hình 7 Chạy tiếp file SM2A-SETUP-ENV2.exe</h5>
+          <h3 id="section2-2">2. Quên mật khẩu</h3>
+            <p>-	Trong quá trình sử dụng, người dùng có thể thay đổi lại mật khẩu mới trong trường hợp quên mật khẩu đăng nhập vào trang quản lý thông tin người dùng phần mềm.</p>
+            <h4>Bước 1: Nhấp chọn vào dòng “Bạn quên mật khẩu”. Hệ thống sẽ điều hướng đến giao diện lấy lại mật khẩu.</h4>
+              <img src={Image13} alt="Trang người dùng" />
+              <h5>Hình 13 Giao diện đăng nhập sau khi đăng ký thành công</h5>
 
-          <p>- Cài đặt Android Studio:  </p>
-          <img src={Image8} alt="Cài đặt Android Studio" />
-          <h5>Hình 8 Cài đặt Android Studio</h5>
+            <h4>Bước 2: Nhập email đã đăng ký tài khoản trước đó.</h4>
+              <img src={Image14} alt="Trang người dùng" />
+              <h5>Hình 14 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <h4>Bước 3: Nhấp chọn vào nút “Lấy OTP”.</h4>
+              <img src={Image15} alt="Trang người dùng" />
+              <h5>Hình 15 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <h4>Bước 4: Lấy mã xác thực OTP được gửi qua email mà người dùng đã đăng ký tài khoản trước đó.</h4>
+              <img src={Image16} alt="Trang người dùng" />
+              <h5>Hình 16 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <h4>Bước 5: Nhập mã OTP vào biểu mẫu.</h4>
+              <img src={Image17} alt="Trang người dùng" />
+              <h5>Hình 17 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <h4>Bước 6: Nhập mật khẩu mới.</h4>
+              <img src={Image18} alt="Trang người dùng" />
+              <h5>Hình 18 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <h4>Bước 7: Nhấp chọn vào nút “Đặt lại mật khẩu”.</h4>
+              <img src={Image19} alt="Trang người dùng" />
+              <h5>Hình 19 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <h4>Bước 8: Sau khi đặt lại mật khẩu thành công, hệ thống sẽ hiển thị thông báo và điều hướng về giao diện đăng nhập.</h4>
+              <img src={Image20} alt="Trang người dùng" />
+              <h5>Hình 20 Giao diện đăng nhập sau khi đăng ký thành công</h5>
+
+            <p>* Lưu ý: Mã OTP chỉ có hiệu lực trong vòng 2 phút. Nếu mã OTP bị hết hạn, người dùng có thể nhấp chọn vào dòng “Nhập lại email” để tiến hành lấy mã xác thực OTP mới.</p>
+
+
         </section>
 
         <section id="section3">
-          <h2>III. Khởi Động Phần Mềm</h2>
+          <h2>III. Giải Nén Và Cài Đặt Môi Trường</h2>
 
-          <h3 id="section3-1">1. Cài đặt phần mềm</h3>
+          <h3 id="section3-1">1. Giải nén file phần mềm đã được cung cấp</h3>
+          <img src={Image21} alt="Giải nén phần mềm" />
+          <h5>Hình 21 Giải nén phần mềm</h5>
+
+          <h3 id="section3-2">2. Cài đặt môi trường</h3>
+          <p>
+          -	Sau khi giải nén xong phần mềm vào thư mục đã giải nén và mở thư mục SETUP_ENV.
+          </p>
+          <img src={Image22} alt="Chạy file setup để cài đặt môi trường" />
+          <h5>Hình 22 Chạy file SM2A-SETUP-ENV1.exe</h5>
+
+          <p>- Chạy file SM2A-SETUP-ENV1.exe </p>
+          <img src={Image23} alt="Chạy file setup để cài đặt môi trường" />
+          <h5>Hình 23 Chạy file SM2A-SETUP-ENV1.exe</h5>
+
+          <p>- Chạy tiếp file SM2A-SETUP-ENV2.exe  </p>
+          <img src={Image24} alt="Chạy tiếp file SM2A-SETUP-ENV2.exe " />
+          <h5>Hình 24 Chạy tiếp file SM2A-SETUP-ENV2.exe</h5>
+
+          <p>- Cài đặt Android Studio:  </p>
+          <img src={Image25} alt="Cài đặt Android Studio" />
+          <h5>Hình 25 Cài đặt Android Studio</h5>
+        </section>
+
+        <section id="section4">
+          <h2>IV. Khởi Động Phần Mềm</h2>
+
+          <h3 id="section4-1">1. Cài đặt phần mềm</h3>
           <p>
             - Sau khi cài đặt xong môi trường, tiến hành mở phần mềm{" "}
             <b style={{ color: "aquamarine" }}>SM2A</b>. Người dùng nên cài đặt phần mềm theo đường dẫn mặc định bên dưới.
           </p>
 
-          <img src={Image9} alt="Cài đặt phần mềm" />
-          <h5>Hình 9 Cài đặt phần mềm</h5>
+          <img src={Image26} alt="Cài đặt phần mềm" />
+          <h5>Hình 26 Cài đặt phần mềm</h5>
 
           <p>- Tạo shortcut trên desktop (nếu muốn)</p>
 
-          <img src={Image10} alt="Tạo shortcut trên desktop" />
-          <h5>Hình 10 Tạo shortcut trên desktop</h5>
+          <img src={Image27} alt="Tạo shortcut trên desktop" />
+          <h5>Hình 27 Tạo shortcut trên desktop</h5>
 
           <p>- Nhấn "Install" để cài đặt phần mềm</p>
 
-          <img src={Image11} alt="Nhấn Install" />
-          <h5>Hình 11 Nhấn Install để cài đặt phần mềm</h5>
+          <img src={Image28} alt="Nhấn Install" />
+          <h5>Hình 28 Nhấn Install để cài đặt phần mềm</h5>
 
           <p>- Nhấn "Finish" để hoàn tất quá trình cài đặt phần mềm</p>
 
-          <img src={Image12} alt="Nhấn Finish để hoàn tất cài đặt" />
-          <h5>Hình 12 Nhấn Finish để hoàn tất cài đặt phần mềm</h5>
+          <img src={Image29} alt="Nhấn Finish để hoàn tất cài đặt" />
+          <h5>Hình 29 Nhấn Finish để hoàn tất cài đặt phần mềm</h5>
         </section>
 
-        <section id="section4">
-          <h2>IV. Đăng Nhập Vào Phần Mềm</h2>
+        <section id="section5">
+          <h2>V. Đăng Nhập Vào Phần Mềm</h2>
 
-          <h3 id="section4-1">1. Xác thực tài khoản</h3>
+          <h3 id="section5-1">1. Xác thực tài khoản</h3>
           <p>
             - Nếu người dùng đăng nhập lần đầu tiên thì phần mềm sẽ yêu cầu nhập
             vào mã kích hoạt để kích hoạt phần mềm. Người dùng phải nhập vào
@@ -172,62 +290,90 @@ const Document = () => {
             người dùng hoặc lấy mã từ email đã đăng ký tài khoản.
           </p>
 
-          <img src={Image13} alt="Kích hoạt phần mềm" />
-          <h5>Hình 13 Kích hoạt phần mềm</h5>
+          <img src={Image30} alt="Kích hoạt phần mềm" />
+          <h5>Hình 30 Kích hoạt phần mềm</h5>
 
-          <h3 id="section4-2">2. Đăng nhập tài khoản</h3>
+          <h3 id="section5-2">2. Đăng nhập tài khoản</h3>
           <p>
             - Sau khi khích hoạt thành công sẽ được chuyển hướng đến trang đăng
             nhập, tại đây người dùng phải nhập vào tài khoản đã đăng ký. 
           </p>
 
-          <img src={Image14} alt="Đăng nhập tài khoản" />
-          <h5>Hình 14 Đăng nhập tài khoản</h5>
+          <img src={Image31} alt="Đăng nhập tài khoản" />
+          <h5>Hình 31 Đăng nhập tài khoản</h5>
 
-          <img src={Image15} alt="Giao diện phần mềm" />
-          <h5>Hình 15 Giao diện phần mềm</h5>
+          <img src={Image32} alt="Giao diện phần mềm" />
+          <h5>Hình 32 Giao diện phần mềm</h5>
         </section>
 
-        <section id="section5">
-          <h2>V. Thiết Lập Cấu Hình Tương Tác</h2>
+        <section id="section6">
+          <h2>VI. Thiết Lập Cấu Hình Tương Tác</h2>
 
-          <h3 id="section5-1">1. Cấu hình LD Player</h3>
+          <h3 id="section6-1">1. Cấu hình LD Player</h3>
           <p>- Mở LDMultiPlayer và đổi tên thiết bị thành Root</p>
 
-          <img src={Image16} alt="Đổi tên thiết bị LDPlayer" />
-          <h5>Hình 16 Đổi tên thiết bị LDPlayer</h5>
+          <img src={Image33} alt="Đổi tên thiết bị LDPlayer" />
+          <h5>Hình 33 Đổi tên thiết bị LDPlayer</h5>
 
           <p>- Mở LDPlayer để cấu hình máy</p>
+            <h4>Bước 1: Nhấn chọn biểu tượng cài đặt trên LD Player để hiển thị cửa sổ cài đặt</h4>
+            <img src={Image34} alt="Cấu hình LDPlayer" />
+            <h5>Hình 34 Nhấn chọn biểu tượng cài đặt</h5>
 
-          <img src={Image17} alt="Cấu hình LDPlayer" />
-          <h5>Hình 17 Cấu hình LDPlayer</h5>
+            <h4>Bước 2: Nhấn chọn tab “Mobile mode” ở mục Resolution</h4>
+            <img src={Image35} alt="Cấu hình LDPlayer" />
+            <h5>Hình 35 Chọn "Mobile mode"</h5>
+            
+            <h4>Bước 3: Nhấn chọn option 540x960( dpi 240)</h4>
+            <img src={Image36} alt="Cấu hình LDPlayer" />
+            <h5>Hình 36 Chọn kích thước màn hình</h5>
 
-          <img src={Image18} alt="Cấu hình LDPlayer" />
-          <h5>Hình 18 Cấu hình LDPlayer</h5>
+            <h4>Bước 4 : Tại thanh menu bên trái chọn mục “Orther settings”</h4>
+            <img src={Image37} alt="Cấu hình LDPlayer" />
+            <h5>Hình 37 Chọn mục "Other settings"</h5>
 
-          <h3 id="section5-2">2. Cài đặt Facebook cho LD Player</h3>
+            <h4>Bước 5: Tại mục “Tab mode” chọn “Enable”</h4>
+            <img src={Image38} alt="Cấu hình LDPlayer" />
+            <h5>Hình 38 Chọn Enable</h5>
+
+            <h4>Bước 6: Tại mục “ADB debugging” chọn option “Open local connection”</h4>
+            <img src={Image39} alt="Cấu hình LDPlayer" />
+            <h5>Hình 39 Chọn "Open local connection"</h5>
+
+            <h4>Bước 7: Nhấn chọn “Save settings”</h4>
+            <img src={Image40} alt="Cấu hình LDPlayer" />
+            <h5>Hình 40 Nhấn chọn nút "Save settings"</h5>
+
+          <h3 id="section6-2">2. Cài đặt Facebook cho LD Player</h3>
           <p>
             - Vào System App hoặc thanh "Search Games" để tải và cài đặt ứng
             dụng Facebook
           </p>
 
-          <img src={Image19} alt="Cài đặt Facebook" />
-          <h5>Hình 19 Cài đặt Facebook</h5>
+          <img src={Image41} alt="Cài đặt Facebook" />
+          <h5>Hình 41 Cài đặt Facebook</h5>
 
-          <img src={Image20} alt="Cài đặt Facebook" />
-          <h5>Hình 20 Cài đặt Facebook</h5>
+          <img src={Image42} alt="Cài đặt Facebook" />
+          <h5>Hình 42 Cài đặt Facebook</h5>
 
-          <h3 id="section5-3">3. Nhập tài khoản cho phần mềm</h3>
+          <h3 id="section6-3">3. Nhập tài khoản cho phần mềm</h3>
           <p>
             - Nhấn vào mục “Nhập tài khoản” ở phần mềm để có thể nhập tự động số lượng lớn tài khoản bằng cách nhấn vào “Nhập File” theo định dạng mà người dùng mong muốn, sau đó nhấn nút nhập dữ liệu
           </p>
 
-          <img src={Image21} alt="Nhập tài khoản cho phần mềm" />
-          <h5>Hình 21 Nhập tài khoản cho phần mềm</h5>
+          <img src={Image43} alt="Nhập tài khoản cho phần mềm" />
+
+          <h3 id="section6-4">4. Tạo Folder ảnh cho tài khoản</h3>
+            <p>
+              - Tại danh sách tài khoản, click chọn một hay nhiều tài khoản muốn tạo thư mục và tiếp tục click chuột phải chọn tạo thư mục.
+            </p>
+
+            <img src={Image82} alt="Nhập tài khoản cho phần mềm" />
+            <h5>Hình Tạo Folder ảnh cho tài khoản</h5>
         </section>
 
-        <section id="section6">
-          <h2>VI. Các Chức Năng</h2>
+        <section id="section7">
+          <h2>VII. Các Chức Năng</h2>
 
           <h3>Tương tác trong phần mềm được chia thành 4 loại chính:</h3>
           <h4>Tương tác cá nhân</h4>
@@ -235,7 +381,7 @@ const Document = () => {
           <h4>Chức năng bạn bè</h4>
           <h4>Chức năng Seeding</h4>
 
-          <h3 id="section6-1">1. Tương tác cá nhân</h3>
+          <h3 id="section7-1">1. Tương tác cá nhân</h3>
           <h4>Xem Reels:</h4>
           <p>
             - Thời gian xem: thời gian xem và tương tác video đó ngẫu nhiên
@@ -259,8 +405,8 @@ const Document = () => {
             phía dưới để có thể comment vào video reels
           </p>
 
-          <img src={Image22} alt="Tính năng xem Reels" />
-          <h5>Hình 22 Tính năng xem Reels</h5>
+          <img src={Image44} alt="Tính năng xem Reels" />
+          <h5>Hình 44 Tính năng xem Reels</h5>
 
           <h4>Xem Story:</h4>
           <p>
@@ -285,8 +431,8 @@ const Document = () => {
             phía dưới để có thể comment vào story.
           </p>
 
-          <img src={Image23} alt="Tính năng xem Story" />
-          <h5>Hình 23 Tính năng xem Story</h5>
+          <img src={Image45} alt="Tính năng xem Story" />
+          <h5>Hình 45 Tính năng xem Story</h5>
 
           <h4>Xem Watch:</h4>
           <p>
@@ -311,8 +457,8 @@ const Document = () => {
             phía dưới để có thể comment vào video watch.
           </p>
 
-          <img src={Image24} alt="Tính năng xem Watch" />
-          <h5>Hình 24 Tính năng xem Watch</h5>
+          <img src={Image46} alt="Tính năng xem Watch" />
+          <h5>Hình 46 Tính năng xem Watch</h5>
 
           <h4>Đăng Story:</h4>
           <p>
@@ -324,8 +470,8 @@ const Document = () => {
             để có thể đăng được ảnh.
           </p>
           <p>- Ở mục Folder nhấn </p>
-          <img src={Image25} alt="Tính năng đăng Story" />
-          <h5>Hình 25 Tính năng đăng Story</h5>
+          <img src={Image47} alt="Tính năng đăng Story" />
+          <h5>Hình 47 Tính năng đăng Story</h5>
 
           <h4>Đăng Status:</h4>
           <p>
@@ -344,16 +490,16 @@ const Document = () => {
           <p>- Nội dung: là nội dung người dùng muốn đăng trên Status</p>
           <p>- Số lượng ảnh: là số ảnh người dùng muốn đăng trên Status</p>
 
-          <img src={Image26} alt="Tính năng đăng Status" />
-          <h5>Hình 26 Tính năng đăng Status</h5>
+          <img src={Image48} alt="Tính năng đăng Status" />
+          <h5>Hình 48 Tính năng đăng Status</h5>
 
           <h4>Đọc thông báo:</h4>
           <p>- Số lượng: là số lượng thông báo người dùng muốn đọc.</p>
 
-          <img src={Image27} alt="Tính năng đăng Reels" />
-          <h5>Hình 27 Đọc thông báo</h5>
+          <img src={Image49} alt="Tính năng đăng Reels" />
+          <h5>Hình 49 Đọc thông báo</h5>
 
-          <h3 id="section6-2">2. Tương tác bài viết</h3>
+          <h3 id="section7-2">2. Tương tác bài viết</h3>
 
           <h4>Tương tác bài viết nhóm:</h4>
           <p>
@@ -386,8 +532,8 @@ const Document = () => {
             sẽ được chia sẻ về tường.
           </p>
 
-          <img src={Image28} alt="Tính năng tương tác bài viết nhóm" />
-          <h5>Hình 28 Tính năng tương tác bài viết nhóm</h5>
+          <img src={Image50} alt="Tính năng tương tác bài viết nhóm" />
+          <h5>Hình 50 Tính năng tương tác bài viết nhóm</h5>
 
           <h4>Tương tác bài viết bạn bè:</h4>
           <p>
@@ -411,8 +557,8 @@ const Document = () => {
             sẽ được chia sẻ về tường.
           </p>
 
-          <img src={Image29} alt="Tính năng tương tác bài viết bạn bè" />
-          <h5>Hình 29 Tính năng tương tác bài viết bạn bè</h5>
+          <img src={Image51} alt="Tính năng tương tác bài viết bạn bè" />
+          <h5>Hình 51 Tính năng tương tác bài viết bạn bè</h5>
 
           <h4>Tương tác bài viết Fanpage:</h4>
           <p>
@@ -452,8 +598,8 @@ const Document = () => {
             sẽ được chia sẻ về tường.
           </p>
 
-          <img src={Image30} alt="Tương tác bài viết trên fanpage" />
-          <h5>Hình 30 Tương tác bài viết trên fanpage</h5>
+          <img src={Image52} alt="Tương tác bài viết trên fanpage" />
+          <h5>Hình 52 Tương tác bài viết trên fanpage</h5>
 
           <h4>Tương tác bài viết trên Newsfeed:</h4>
           <p>
@@ -477,10 +623,10 @@ const Document = () => {
             sẽ được chia sẻ về tường.
           </p>
 
-          <img src={Image31} alt="Tính năng tương tác bài viết trên Newsfeed" />
-          <h5>Hình 31 Tính năng tương tác bài viết trên Newsfeed</h5>
+          <img src={Image53} alt="Tính năng tương tác bài viết trên Newsfeed" />
+          <h5>Hình 53 Tính năng tương tác bài viết trên Newsfeed</h5>
 
-          <h3 id="section6-3">3. Chức năng bạn bè</h3>
+          <h3 id="section7-3">3. Chức năng bạn bè</h3>
 
           <h4>Huỷ kết bạn:</h4>
           <p>
@@ -493,8 +639,8 @@ const Document = () => {
           </p>
           <p>- Danh sách UID: là danh sách người dùng muốn huỷ kết bạn.</p>
 
-          <img src={Image32} alt="Chức năng huỷ kết bạn" />
-          <h5>Hình 32 Chức năng huỷ kết bạn</h5>
+          <img src={Image54} alt="Chức năng huỷ kết bạn" />
+          <h5>Hình 54 Chức năng huỷ kết bạn</h5>
 
           <h4>Xác nhận bạn bè:</h4>
           <p>
@@ -502,8 +648,8 @@ const Document = () => {
             kết bạn.
           </p>
 
-          <img src={Image33} alt="Tính năng xác nhận kết bạn" />
-          <h5>Hình 33 Tính năng xác nhận kết bạn</h5>
+          <img src={Image55} alt="Tính năng xác nhận kết bạn" />
+          <h5>Hình 55 Tính năng xác nhận kết bạn</h5>
 
           <h4>Kết bạn theo danh sách ID:</h4>
           <p>
@@ -511,8 +657,8 @@ const Document = () => {
             muốn kết bạn.
           </p>
 
-          <img src={Image34} alt="Tính năng kết bạn theo danh sách ID" />
-          <h5>Hình 34 Tính năng kết bạn theo danh sách ID</h5>
+          <img src={Image56} alt="Tính năng kết bạn theo danh sách ID" />
+          <h5>Hình 56 Tính năng kết bạn theo danh sách ID</h5>
 
           <h4>Kết bạn theo từ khoá:</h4>
           <p>- Số lượng bạn: là số lượng người dùng muốn kết bạn.</p>
@@ -521,8 +667,8 @@ const Document = () => {
             vd: Hoàng Kim
           </p>
 
-          <img src={Image35} alt="Tính năng kết bạn theo từ khoá" />
-          <h5>Hình 35 Tính năng kết bạn theo từ khoá</h5>
+          <img src={Image57} alt="Tính năng kết bạn theo từ khoá" />
+          <h5>Hình 57 Tính năng kết bạn theo từ khoá</h5>
 
           <h4>Kết bạn thành viên trong nhóm:</h4>
           <p>
@@ -540,10 +686,10 @@ const Document = () => {
           </p>
 
           <img
-            src={Image36}
+            src={Image58}
             alt="Tính năng kết bạn với thành viên trong nhóm"
           />
-          <h5>Hình 36 Tính năng kết bạn với thành viên trong nhóm</h5>
+          <h5>Hình 58 Tính năng kết bạn với thành viên trong nhóm</h5>
 
           <h4>Kết bạn với bạn bè của bạn bè của bạn:</h4>
           <p>- Số lượng bạn: là số lượng bạn bè mà người dùng muốn kết bạn.</p>
@@ -557,17 +703,17 @@ const Document = () => {
           </p>
 
           <img
-            src={Image37}
+            src={Image59}
             alt="Tính năng kết bạn với bạn bè của bạn bè của bạn"
           />
-          <h5>Hình 37 Tính năng kết bạn với bạn bè của bạn bè của bạn</h5>
+          <h5>Hình 59 Tính năng kết bạn với bạn bè của bạn bè của bạn</h5>
 
           <h4>Tham gia nhóm theo từ khoá:</h4>
           <p>- Số lượng: là số lượng nhóm mà người dùng muốn tham gia.</p>
           <p>- Từ khoá: từ khoá nhóm mà người dùng muốn tham gia vào.</p>
 
-          <img src={Image38} alt="Tính năng tham gia nhóm theo từ khoá" />
-          <h5>Hình 38 Tính năng tham gia nhóm theo từ khoá</h5>
+          <img src={Image60} alt="Tính năng tham gia nhóm theo từ khoá" />
+          <h5>Hình 60 Tính năng tham gia nhóm theo từ khoá</h5>
 
           <h4>Tham gia nhóm theo gợi ý:</h4>
           <p>
@@ -575,10 +721,10 @@ const Document = () => {
             theo đề xuất, gọi ý.
           </p>
 
-          <img src={Image39} alt="Tính năng tham gia nhóm theo gợi ý" />
-          <h5>Hình 39 Tính năng tham gia nhóm theo gợi ý</h5>
+          <img src={Image61} alt="Tính năng tham gia nhóm theo gợi ý" />
+          <h5>Hình 61 Tính năng tham gia nhóm theo gợi ý</h5>
 
-          <h3 id="section6-4">4. Chức năng Seeding</h3>
+          <h3 id="section7-4">4. Chức năng Seeding</h3>
 
           <h4>4.1. Chia sẻ:</h4>
           <p>
@@ -594,8 +740,8 @@ const Document = () => {
             viết cần chia sẻ.
           </p>
 
-          <img src={Image40} alt="Tính năng chia sẻ bài viết" />
-          <h5>Hình 40 Tính năng chia sẻ bài viết</h5>
+          <img src={Image62} alt="Tính năng chia sẻ bài viết" />
+          <h5>Hình 62 Tính năng chia sẻ bài viết</h5>
 
           <h4>4.2. Theo dõi:</h4>
           <p>
@@ -607,16 +753,16 @@ const Document = () => {
           </p>
 
           <img
-            src={Image41}
+            src={Image63}
             alt="Tính năng theo dõi Page theo danh sách link"
           />
-          <h5>Hình 41 Tính năng theo dõi Page theo danh sách link</h5>
+          <h5>Hình 63 Tính năng theo dõi Page theo danh sách link</h5>
 
           <h4>4.3. Đánh giá Page:</h4>
           <p>- Link page: đường dẫn đến page mà người dùng muốn đánh giá.</p>
 
-          <img src={Image42} alt="Tính năng đánh giá page" />
-          <h5>Hình 42 Tính năng đánh giá page</h5>
+          <img src={Image64} alt="Tính năng đánh giá page" />
+          <h5>Hình 64 Tính năng đánh giá page</h5>
 
           <h4>4.4. Tương tác livestream:</h4>
           <p>
@@ -633,8 +779,8 @@ const Document = () => {
             đó.
           </p>
 
-          <img src={Image43} alt="Tính năng tương tác Livestream" />
-          <h5>Hình 43 Tính năng tương tác Livestream</h5>
+          <img src={Image65} alt="Tính năng tương tác Livestream" />
+          <h5>Hình 65 Tính năng tương tác Livestream</h5>
 
           <h4>4.5. Mời bạn like Page:</h4>
           <p>
@@ -649,8 +795,8 @@ const Document = () => {
             trong quá trình tương tác.
           </p>
 
-          <img src={Image44} alt="Tính năng mời bạn bè like page" />
-          <h5>Hình 44 Tính năng mời bạn bè like page</h5>
+          <img src={Image66} alt="Tính năng mời bạn bè like page" />
+          <h5>Hình 66 Tính năng mời bạn bè like page</h5>
 
           <h4>4.6. Tương tác bài viết chỉ định:</h4>
           <p>
@@ -681,8 +827,8 @@ const Document = () => {
             folder "Girl" thì phải tạo với đường dẫn như trên.
           </p>
 
-          <img src={Image45} alt="Tính năng tương tác bài viết theo chỉ định" />
-          <h5>Hình 45 Tính năng tương tác bài viết theo chỉ định</h5>
+          <img src={Image67} alt="Tính năng tương tác bài viết theo chỉ định" />
+          <h5>Hình 67 Tính năng tương tác bài viết theo chỉ định</h5>
 
           <h4>4.7. Tương tác bài viết theo từ khoá:</h4>
           <p>
@@ -709,8 +855,8 @@ const Document = () => {
             viết.
           </p>
 
-          <img src={Image46} alt="Tính năng tương tác bài viết theo từ khoá" />
-          <h5>Hình 46 Tính năng tương tác bài viết theo từ khoá</h5>
+          <img src={Image68} alt="Tính năng tương tác bài viết theo từ khoá" />
+          <h5>Hình 68 Tính năng tương tác bài viết theo từ khoá</h5>
 
           <h4>4.8. Đăng bài:</h4>
           <p>
@@ -731,16 +877,16 @@ const Document = () => {
             viết. Hình ảnh sẽ được lấy từ Folder Girl.
           </p>
 
-          <img src={Image47} alt="Tính năng đăng bài" />
-          <h5>Hình 47 Tính năng đăng bài</h5>
+          <img src={Image69} alt="Tính năng đăng bài" />
+          <h5>Hình 69 Tính năng đăng bài</h5>
         </section>
 
-        <section id="section7">
-          <h2>VII. Chạy Kịch Bản Tương Tác Trên Phần Mềm</h2>
+        <section id="section8">
+          <h2>VIII. Chạy Kịch Bản Tương Tác Trên Phần Mềm</h2>
 
-          <h3 id="section7-1">1. Tạo kịch bản và thêm các hành động</h3>
+          <h3 id="section8-1">1. Tạo kịch bản và thêm các hành động</h3>
 
-          <h4 id="section7-1-1">1.1. Tạo kịch bản:</h4>
+          <h4 id="section8-1-1">1.1. Tạo kịch bản:</h4>
           <p>
             - Bước 1: Nhấn chọn vào mục <strong>Cài đặt tương tác</strong> ở
             giao diện chính của phần mềm.
@@ -751,17 +897,17 @@ const Document = () => {
             <strong>Thêm kịch bản</strong>.
           </p>
 
-          <img src={Image48} alt="Tạo kịch bản" />
-          <h5>Hình 48 Tạo kịch bản</h5>
+          <img src={Image70} alt="Tạo kịch bản" />
+          <h5>Hình 70 Tạo kịch bản</h5>
 
           <p>
             - Bước 3: Nhập vào tên kịch bản và nhấn nút <strong>Tạo</strong>.
           </p>
 
-          <img src={Image49} alt="Nhập tên kịch bản" />
-          <h5>Hình 49 Tạo kịch bản</h5>
+          <img src={Image71} alt="Nhập tên kịch bản" />
+          <h5>Hình 71 Tạo kịch bản</h5>
 
-          <h4 id="section7-1-2">1.2. Thêm hành động cho kịch bản:</h4>
+          <h4 id="section8-1-2">1.2. Thêm hành động cho kịch bản:</h4>
           <p>
             - Bước 1: Tại trang <strong>Quản lý kịch bản</strong>, người dùng
             nhấn chuột vào kịch bản vừa tạo và tiếp tục nhấn chuột phải, sau đó
@@ -769,11 +915,11 @@ const Document = () => {
             <strong>Các danh sách hành động</strong>.
           </p>
 
-          <img src={Image50} alt="Thêm hành động cho kịch bản" />
-          <h5>Hình 50 Thêm hành động cho kịch bản</h5>
+          <img src={Image72} alt="Thêm hành động cho kịch bản" />
+          <h5>Hình 72 Thêm hành động cho kịch bản</h5>
 
-          <img src={Image51} alt="Thêm kịch bản cho hành động" />
-          <h5>Hình 51 Thêm kịch bản cho hành động</h5>
+          <img src={Image73} alt="Thêm kịch bản cho hành động" />
+          <h5>Hình 73 Thêm kịch bản cho hành động</h5>
 
           <p>
             - Bước 2: Sau khi tab <strong>Action</strong> hiện ra, người dùng
@@ -781,17 +927,17 @@ const Document = () => {
             hướng dẫn ở mục <strong>VI Các chức năng</strong>.
           </p>
 
-          <img src={Image52} alt="Thêm hành động thành công cho kịch bản" />
-          <h5>Hình 52 Thêm hành động thành công cho kịch bản</h5>
+          <img src={Image74} alt="Thêm hành động thành công cho kịch bản" />
+          <h5>Hình 74 Thêm hành động thành công cho kịch bản</h5>
 
-          <h3 id="section7-2">2. Chạy kịch bản</h3>
+          <h3 id="section8-2">2. Chạy kịch bản</h3>
           <p>
             - Bước 1: Ở mục <strong>Quản lý mạng xã hội</strong>, chọn option{" "}
             <strong>Facebook</strong>.
           </p>
 
-          <img src={Image53} alt="Nhấn chọn Facebook" />
-          <h5>Hình 53 Nhấn chọn Facebook</h5>
+          <img src={Image75} alt="Nhấn chọn Facebook" />
+          <h5>Hình 75 Nhấn chọn Facebook</h5>
 
           <p>
             - Bước 2: Chọn số lượng tài khoản chạy tương tác. Nếu chạy nhiều tài
@@ -799,16 +945,16 @@ const Document = () => {
             nhấn vào các tài khoản cần chạy tương tác.
           </p>
 
-          <img src={Image54} alt="Chọn số lượng tài khoản cần tương tác" />
-          <h5>Hình 54 Chọn số lượng tài khoản cần tương tác</h5>
+          <img src={Image76} alt="Chọn số lượng tài khoản cần tương tác" />
+          <h5>Hình 76 Chọn số lượng tài khoản cần tương tác</h5>
 
           <p>
             - Bước 3: Chọn vào kịch bản chứa các hành động đã tạo và nhấn{" "}
             <strong>Chạy tương tác</strong>.
           </p>
 
-          <img src={Image55} alt="Chọn kịch bản tương ứng và khởi chạy" />
-          <h5>Hình 55 Chọn kịch bản tương ứng và khởi chạy</h5>
+          <img src={Image77} alt="Chọn kịch bản tương ứng và khởi chạy" />
+          <h5>Hình 77 Chọn kịch bản tương ứng và khởi chạy</h5>
 
           <p>
             - Bước 4: Sau khi đã chạy xong kịch bản, để chạy kịch bản khác,
@@ -817,18 +963,18 @@ const Document = () => {
           </p>
 
           <img
-            src={Image56}
+            src={Image78}
             alt="Nhấn ngừng tương tác để bắt đầu một kịch bản khác"
           />
-          <h5>Hình 56 Nhấn ngừng tương tác để bắt đầu một kịch bản khác</h5>
+          <h5>Hình 78 Nhấn ngừng tương tác để bắt đầu một kịch bản khác</h5>
         </section>
 
-        <section id="section8">
-          <h2>VIII. Xuất Báo Cáo Trên Phần Mềm</h2>
-          <img src={Image57} alt="Báo cáo và báo cáo tương tác" />
-          <h5>Hình 57 Báo cáo và báo cáo tương tác</h5>
+        <section id="section9">
+          <h2>IX. Xuất Báo Cáo Trên Phần Mềm</h2>
+          <img src={Image79} alt="Báo cáo và báo cáo tương tác" />
+          <h5>Hình 79 Báo cáo và báo cáo tương tác</h5>
 
-          <h3 id="section8-1">1. Báo cáo</h3>
+          <h3 id="section9-1">1. Báo cáo</h3>
           <p>
             - Khi nhấn vào Báo cáo, người dùng sẽ nhận được 1 file excel trên
             desktop với thông tin của các tài khoản và thời gian lần cuối tương
@@ -836,12 +982,12 @@ const Document = () => {
           </p>
 
           <img
-            src={Image58}
+            src={Image80}
             alt="Thông tin và thời gian lần cuối tương tác của tài khoản"
           />
-          <h5>Hình 58 Thông tin và thời gian lần cuối tương tác của tài khoản</h5>
+          <h5>Hình 80 Thông tin và thời gian lần cuối tương tác của tài khoản</h5>
 
-          <h3 id="section8-2">2. Báo cáo tương tác</h3>
+          <h3 id="section9-2">2. Báo cáo tương tác</h3>
           <p>
             - Khi người dùng nhấn vào Báo cáo tương tác, người dùng sẽ nhận được
             1 file excel trên desktop với thông tin chi tiết về các hành động,
@@ -852,8 +998,8 @@ const Document = () => {
             bản lần cuối)
           </p>
 
-          <img src={Image59} alt="Báo cáo chi tiết của các kịch bản đã chạy" />
-          <h5>Hình 59 Báo cáo chi tiết của các kịch bản đã chạy</h5>
+          <img src={Image81} alt="Báo cáo chi tiết của các kịch bản đã chạy" />
+          <h5>Hình 81 Báo cáo chi tiết của các kịch bản đã chạy</h5>
         </section>
         </div>
     </div>
