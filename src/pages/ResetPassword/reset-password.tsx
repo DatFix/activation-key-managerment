@@ -106,7 +106,7 @@ const ResetPasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://www.sm2a.sdtc.vn/auth/reset-password",
+        "http://127.0.0.1:49152/auth/reset-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -150,7 +150,7 @@ const ResetPasswordForm: React.FC = () => {
         <CyberLoading />
       ) : (
         <>
-         <div className="logo">
+          <div className="logo">
             <img src={logo} alt="" />
           </div>
           <h1 className="title">SM2A</h1>

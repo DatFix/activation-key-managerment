@@ -34,7 +34,7 @@ const ForgetPasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://www.sm2a.sdtc.vn/auth/forgot-password",
+        "http://127.0.0.1:49152/auth/forgot-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -72,7 +72,7 @@ const ForgetPasswordForm: React.FC = () => {
         <CyberLoading />
       ) : (
         <>
-         <div className="logo">
+          <div className="logo">
             <img src={logo} alt="" />
           </div>
           <h1 className="title">SM2A</h1>

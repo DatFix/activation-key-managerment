@@ -60,9 +60,7 @@ const Admin: React.FC = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get(
-        "http://www.sm2a.sdtc.vn/users"
-      );
+      const response = await axios.get("http://127.0.0.1:49152users");
       setUserList(response.data);
       setErrors({});
     } catch (error: any) {
@@ -78,10 +76,10 @@ const Admin: React.FC = () => {
 
   const handleLogout = () => {
     toast.success("Đăng xuất thành công.");
-  
+
     // Navigate to home page and reload
     setTimeout(() => {
-      navigate('/', { replace: true });
+      navigate("/", { replace: true });
       window.location.reload();
     }, 2000);
     localStorage.removeItem("user_id");
@@ -91,7 +89,7 @@ const Admin: React.FC = () => {
   const handleUpdate = async (updatedUser: Partial<User>) => {
     try {
       const response = await axios.put(
-        `http://www.sm2a.sdtc.vn/update-user/${editingUser?._id}`,
+        `http://127.0.0.1:49152/update-user/${editingUser?._id}`,
         updatedUser
       );
       if (response.status === 200) {
@@ -115,7 +113,7 @@ const Admin: React.FC = () => {
     try {
       if (editingUser) {
         const response = await axios.put(
-          `http://www.sm2a.sdtc.vn/delete-user/${editingUser._id}`,
+          `http://127.0.0.1:49152/delete-user/${editingUser._id}`,
           { isDeleted: true }
         );
         if (response.status === 200) {
@@ -194,11 +192,11 @@ const Admin: React.FC = () => {
                       <td>{user.username}</td>
                       <td>{user.activate_key}</td>
                       {user.is_active ? (
-                        <td style={{ color: "rgb(62, 247, 88)" }}>Đã kích hoạt</td>
-                      ) : (
-                        <td style={{ color: "yellow" }}>
-                          Chưa kích hoạt
+                        <td style={{ color: "rgb(62, 247, 88)" }}>
+                          Đã kích hoạt
                         </td>
+                      ) : (
+                        <td style={{ color: "yellow" }}>Chưa kích hoạt</td>
                       )}
                       <td>{user.role}</td>
                       <td className="action">

@@ -78,7 +78,7 @@ const ChangePasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://www.sm2a.sdtc.vn/auth/change-password",
+        "http://127.0.0.1:49152/auth/change-password",
         {
           method: "POST",
           headers: {
@@ -104,9 +104,9 @@ const ChangePasswordForm: React.FC = () => {
       handleNavigate();
     } catch (error: any) {
       toast.error(error.message);
-      
+
       setTimeout(() => {
-        window.location.href = '/change-password'
+        window.location.href = "/change-password";
       }, 3000);
     }
   };

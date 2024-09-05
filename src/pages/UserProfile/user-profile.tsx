@@ -59,9 +59,7 @@ const Profile: React.FC = () => {
     const fetchUser = async () => {
       setLoading(true);
       try {
-        const response = await fetch(
-          `http://www.sm2a.sdtc.vn/user/${user_id}`
-        );
+        const response = await fetch(`http://127.0.0.1:49152/user/${user_id}`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -102,24 +100,24 @@ const Profile: React.FC = () => {
   };
 
   const handleToDocument = () => {
-    navigate("/document")
-  }
+    navigate("/document");
+  };
 
   const handleLogout = () => {
     // Remove items from localStorage and sessionStorage
     localStorage.removeItem("user_id");
     localStorage.removeItem("avatar");
     sessionStorage.removeItem("isLogin");
-  
+
     // Show success message
     toast.success("Đăng xuất thành công.");
-  
+
     // Navigate to home page and reload
     setTimeout(() => {
-      navigate('/', { replace: true });
+      navigate("/", { replace: true });
       window.location.reload();
     }, 3000);
-  }
+  };
 
   if (loading) return <CyberLoading />;
   if (errors.message) return <p aria-live="polite">Error: {errors.message}</p>;
@@ -163,15 +161,15 @@ const Profile: React.FC = () => {
                 <div className="admin-tabs">
                   <button
                     className={"active"}
-                    style={{margin: "1rem 0", justifyContent:"center"}}
-                    onClick={()=> handleToDocument()}
+                    style={{ margin: "1rem 0", justifyContent: "center" }}
+                    onClick={() => handleToDocument()}
                   >
                     Hướng dẫn sử dụng SM2A
                   </button>
                 </div>
               </div>
             </div>
-            <button className="cyber-button" onClick={() =>handleLogout()}>
+            <button className="cyber-button" onClick={() => handleLogout()}>
               <span></span>
               <span></span>
               <span></span>

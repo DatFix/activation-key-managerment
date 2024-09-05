@@ -60,7 +60,7 @@ const RegisterForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://www.sm2a.sdtc.vn/auth/register", {
+      const response = await fetch("http://127.0.0.1:49152/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -91,10 +91,10 @@ const RegisterForm: React.FC = () => {
 
       navigate("/");
       setTimeout(() => {
-        if(data.message == 'User created successfully'){
+        if (data.message == "User created successfully") {
           toast.success("Đăng ký thành công");
-        }else{
-           toast.success(data.message);
+        } else {
+          toast.success(data.message);
         }
       }, 1000);
     } catch (error: any) {
