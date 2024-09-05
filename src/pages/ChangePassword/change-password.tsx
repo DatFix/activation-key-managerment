@@ -78,7 +78,7 @@ const ChangePasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://software-authentication.onrender.com/auth/change-password",
+        "http://www.sm2a.sdtc.vn/auth/change-password",
         {
           method: "POST",
           headers: {

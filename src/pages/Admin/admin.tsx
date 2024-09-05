@@ -61,7 +61,7 @@ const Admin: React.FC = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        "https://software-authentication.onrender.com/users"
+        "http://www.sm2a.sdtc.vn/users"
       );
       setUserList(response.data);
       setErrors({});
@@ -91,7 +91,7 @@ const Admin: React.FC = () => {
   const handleUpdate = async (updatedUser: Partial<User>) => {
     try {
       const response = await axios.put(
-        `https://software-authentication.onrender.com/update-user/${editingUser?._id}`,
+        `http://www.sm2a.sdtc.vn/update-user/${editingUser?._id}`,
         updatedUser
       );
       if (response.status === 200) {
@@ -115,7 +115,7 @@ const Admin: React.FC = () => {
     try {
       if (editingUser) {
         const response = await axios.put(
-          `https://software-authentication.onrender.com/delete-user/${editingUser._id}`,
+          `http://www.sm2a.sdtc.vn/delete-user/${editingUser._id}`,
           { isDeleted: true }
         );
         if (response.status === 200) {

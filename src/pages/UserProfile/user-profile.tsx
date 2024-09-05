@@ -60,7 +60,7 @@ const Profile: React.FC = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://software-authentication.onrender.com/user/${user_id}`
+          `http://www.sm2a.sdtc.vn/user/${user_id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -106,7 +106,7 @@ const ResetPasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://software-authentication.onrender.com/auth/reset-password",
+        "http://www.sm2a.sdtc.vn/auth/reset-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

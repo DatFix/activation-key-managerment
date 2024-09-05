@@ -60,7 +60,7 @@ const RegisterForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://software-authentication.onrender.com/auth/register", {
+      const response = await fetch("http://www.sm2a.sdtc.vn/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

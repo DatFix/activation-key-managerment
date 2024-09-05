@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://software-authentication.onrender.com/auth/login",
+        "http://www.sm2a.sdtc.vn/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
