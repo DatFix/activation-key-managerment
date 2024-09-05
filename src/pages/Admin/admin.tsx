@@ -60,7 +60,7 @@ const Admin: React.FC = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://www.sm2a.sdtc.vn/api/v1/users");
+      const response = await axios.get("https://www.sm2a.sdtc.vn/api/v1/users");
       setUserList(response.data);
       setErrors({});
     } catch (error: any) {
@@ -89,7 +89,7 @@ const Admin: React.FC = () => {
   const handleUpdate = async (updatedUser: Partial<User>) => {
     try {
       const response = await axios.put(
-        `http://www.sm2a.sdtc.vn/api/v1/update-user/${editingUser?._id}`,
+        `https://www.sm2a.sdtc.vn/api/v1/update-user/${editingUser?._id}`,
         updatedUser
       );
       if (response.status === 200) {
@@ -113,7 +113,7 @@ const Admin: React.FC = () => {
     try {
       if (editingUser) {
         const response = await axios.put(
-          `http://www.sm2a.sdtc.vn/api/v1/delete-user/${editingUser._id}`,
+          `https://www.sm2a.sdtc.vn/api/v1/delete-user/${editingUser._id}`,
           { isDeleted: true }
         );
         if (response.status === 200) {

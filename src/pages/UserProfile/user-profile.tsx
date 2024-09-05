@@ -60,7 +60,7 @@ const Profile: React.FC = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://www.sm2a.sdtc.vn/api/v1/user/${user_id}`
+          `https://www.sm2a.sdtc.vn/api/v1/user/${user_id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
