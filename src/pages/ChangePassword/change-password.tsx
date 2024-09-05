@@ -78,7 +78,7 @@ const ChangePasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:49152/auth/change-password",
+        "http://www.sm2a.sdtc.vn/api/v1/auth/change-password",
         {
           method: "POST",
           headers: {

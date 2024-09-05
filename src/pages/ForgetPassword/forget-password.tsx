@@ -34,7 +34,7 @@ const ForgetPasswordForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:49152/auth/forgot-password",
+        "http://www.sm2a.sdtc.vn/api/v1/auth/forgot-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

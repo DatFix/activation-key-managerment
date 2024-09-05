@@ -60,18 +60,21 @@ const RegisterForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:49152/auth/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username,
-          password,
-          firstname,
-          lastname,
-          phone,
-          email,
-        }),
-      });
+      const response = await fetch(
+        "http://www.sm2a.sdtc.vn/api/v1/auth/register",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username,
+            password,
+            firstname,
+            lastname,
+            phone,
+            email,
+          }),
+        }
+      );
 
       if (!response.ok) {
         const errData = await response.json();
