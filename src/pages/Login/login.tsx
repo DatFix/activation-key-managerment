@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://www.sm2a.sdtc.vn/api/v1/auth/login",
+        "http://www.sm2a.sdtc.vn/api/v1/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
