@@ -100,11 +100,11 @@ const Document = () => {
           <p>
           - Bước 1 Truy cập đường link:{" "}
             <Link
-            to="http://sm2a.sdtc.vn/"
+            to="https://sm2a.sdtc.vn/"
             target="_blank"
             rel="noopener noreferrer"
             >
-            http://sm2a.sdtc.vn/
+            https://sm2a.sdtc.vn/  
           </Link>{" "}
           trên trình duyệt để vào trang chủ phần mềm SM2A.
           </p>
