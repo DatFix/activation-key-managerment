@@ -257,3 +257,61 @@ body {
     bottom: 100%;
   }
 }
+
+
+@media only screen and (max-width:1440px) {
+  .login-box {
+    width: 27rem; /* Reduce the width */
+    padding: 10px 25px; /* Adjust the padding */
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, .5); /* Slightly smaller shadow */
+    border: 1px solid #00ced1; /* Slightly reduce the border brightness */
+    margin: 1rem 0;
+  }
+
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.4rem;
+    color: aqua;
+    border: none;
+    border-bottom: 1px solid aqua;
+    outline: none;
+    background: transparent;
+  }
+
+  .login-box h2 {
+    margin: 0.4rem 0 0.3rem;
+    padding: 0;
+    color: aqua;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    color: aqua;
+    border: none;
+    border-bottom: 1px solid aqua;
+    outline: none;
+    background: transparent;
+  }
+
+  .error-message {
+    color: rgb(249, 112, 43);
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    margin: 38px 0 0 0;
+  }
+
+  .login-box .user-box {
+    margin-bottom: 2.8rem;
+  }
+
+  .logo{
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+}
