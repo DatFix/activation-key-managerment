@@ -61,7 +61,7 @@ const RegisterForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://www.sm2a.sdtc.vn/api/v1/auth/register",
+        "https://www.sm2a.sdtc.vn/api/v1/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

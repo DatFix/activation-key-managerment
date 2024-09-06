@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://www.sm2a.sdtc.vn/api/v1/auth/login",
+        "https://www.sm2a.sdtc.vn/api/v1/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -81,12 +81,12 @@ const LoginForm: React.FC = () => {
         setTimeout(() => {
           navigate("/dashboard", { state: { componentType: "user" } });
           window.location.href = "/dashboard";
-        }, 3000);
+        }, 2200);
       } else if (data.message === "Admin logged in successfully") {
-        setTimeout(() => {
+        setTimeout(() => {  
           navigate("/dashboard", { state: { componentType: "admin" } });
           window.location.href = "/dashboard";
-        }, 3000);
+        }, 2200);
       } else {
         console.error("Unexpected login response:", data.message);
         // alert("Đăng nhập thành công, nhưng có lỗi xảy ra. Vui lòng thử lại.");
