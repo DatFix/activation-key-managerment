@@ -146,7 +146,7 @@ input[type="tel"] {
     background-color: transparent;
     color: #00ffff;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     box-sizing: border-box;
     clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
 }

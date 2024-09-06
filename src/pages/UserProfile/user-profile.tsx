@@ -102,8 +102,9 @@ const Profile: React.FC = () => {
   };
 
   const handleToDocument = () => {
-    navigate("/document");
+    window.open("/document", "_blank");
   };
+  
 
   const handleLogout = () => {
     // Remove items from localStorage and sessionStorage
@@ -191,6 +192,7 @@ const Profile: React.FC = () => {
               </div>
             )}
 
+            <div style={{width:"60%"}}>
             <div className="username-password">
               <div className="input-field">
                 <label>Tài khoản</label>
@@ -226,6 +228,8 @@ const Profile: React.FC = () => {
                 <label>Số điện thoại</label>
                 <input type="tel" value={user?.phone || ""} readOnly />
               </div>
+            </div>
+            
             </div>
           </div>
         </div>

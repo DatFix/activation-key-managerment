@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const user_id = localStorage.getItem("user_id");
-  const handleBack = () => {
-    const componentType = user_id ? "user" : "admin";
-    setTimeout(() => {
-      navigate("/dashboard", { state: { componentType } });
-    }, 3000);
-  };
+  // const user_id = localStorage.getItem("user_id");
+  // const handleBack = () => {
+  //   const componentType = user_id ? "user" : "admin";
+  //   setTimeout(() => {
+  //     navigate("/dashboard", { state: { componentType } });
+  //   }, 3000);
+  // };
 
   const handleClick = (section: string) => {
     setActiveSection(section);
@@ -20,13 +20,13 @@ const Navigation = () => {
 
   return (
     <nav className="navigation">
-      <button className="cyber-button" onClick={handleBack}>
+      {/* <button className="cyber-button" onClick={handleBack}>
         Quay lại trang
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </button>
+      </button> */}
       <ul>
         <li>
           <Link
