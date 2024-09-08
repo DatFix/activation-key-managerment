@@ -38,6 +38,10 @@ const Admin: React.FC = () => {
   const [showDeleteToast, setShowDeleteToast] = useState(false);
   const navigate = useNavigate();
 
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage] = useState(10); // Number of users per page
+
   const openModal = (user: User) => {
     setEditingUser(user);
     setIsModalOpen(true);
@@ -74,10 +78,27 @@ const Admin: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Pagination calculations
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = userList.slice(indexOfFirstUser, indexOfLastUser);
+  const totalPages = Math.ceil(userList.length / usersPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   const handleLogout = () => {
     toast.success("Đăng xuất thành công.");
 
-    // Navigate to home page and reload
     setTimeout(() => {
       navigate("/", { replace: true });
       window.location.reload();
@@ -163,61 +184,92 @@ const Admin: React.FC = () => {
           <h1>Quản Lý Người Dùng</h1>
           {errors.message && <p>Error: {errors.message}</p>}
           {!errors.message && (
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Họ</th>
-                  <th>Tên</th>
-                  <th>Email</th>
-                  <th>Số Điện Thoại</th>
-                  <th>Tài Khoản</th>
-                  <th>Mã Kích Hoạt</th>
-                  <th>Trạng Thái</th>
-                  <th>Vai Trò</th>
-                  <th>Tuỳ Chọn</th>
-                </tr>
-              </thead>
-              <tbody>
-                {userList.map((user) =>
-                  user.isDeleted ? (
-                    <></>
-                  ) : (
-                    <tr key={user._id}>
-                      <td>{user._id}</td>
-                      <td>{user.lastname}</td>
-                      <td>{user.firstname}</td>
-                      <td>{user.email}</td>
-                      <td>{user.phone}</td>
-                      <td>{user.username}</td>
-                      <td>{user.activate_key}</td>
-                      {user.is_active ? (
-                        <td style={{ color: "rgb(62, 247, 88)" }}>
-                          Đã kích hoạt
+            <>
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Họ</th>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Số Điện Thoại</th>
+                    <th>Tài Khoản</th>
+                    <th>Mã Kích Hoạt</th>
+                    <th>Trạng Thái</th>
+                    <th>Vai Trò</th>
+                    <th>Tuỳ Chọn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {currentUsers.map((user) =>
+                    user.isDeleted ? null : (
+                      <tr key={user._id}>
+                        <td>{user._id}</td>
+                        <td>{user.lastname}</td>
+                        <td>{user.firstname}</td>
+                        <td>{user.email}</td>
+                        <td>{user.phone}</td>
+                        <td>{user.username}</td>
+                        <td>{user.activate_key}</td>
+                        {user.is_active ? (
+                          <td style={{ color: "rgb(62, 247, 88)" }}>
+                            Đã kích hoạt
+                          </td>
+                        ) : (
+                          <td style={{ color: "yellow" }}>Chưa kích hoạt</td>
+                        )}
+                        <td>{user.role}</td>
+                        <td className="action">
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => openModal(user)}
+                          >
+                            <FaEdit />
+                          </button>
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => openModalDelete(user)}
+                          >
+                            <FaRegTrashAlt />
+                          </button>
                         </td>
-                      ) : (
-                        <td style={{ color: "yellow" }}>Chưa kích hoạt</td>
-                      )}
-                      <td>{user.role}</td>
-                      <td className="action">
-                        <button
-                          className="btn btn-primary"
-                          onClick={() => openModal(user)}
-                        >
-                          <FaEdit />
-                        </button>
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => openModalDelete(user)}
-                        >
-                          <FaRegTrashAlt />
-                        </button>
-                      </td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </table>
+                      </tr>
+                    )
+                  )}
+                </tbody>
+              </table>
+              <div className="pagination" style={{ position: "fixed", bottom: "2rem", right: "2rem" }}>
+                <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+                  {"<"}
+                </button>
+                {Array.from({ length: totalPages }, (_, index) => {
+                  const pageNumber = index + 1;
+                  const maxPagesToShow = 5;
+                  const startPage = Math.max(
+                    Math.min(currentPage - Math.floor(maxPagesToShow / 2), totalPages - maxPagesToShow + 1),
+                    1
+                  );
+                  const endPage = Math.min(startPage + maxPagesToShow - 1, totalPages);
+
+                  return (
+                    pageNumber >= startPage &&
+                    pageNumber <= endPage && (
+                      <button
+                        key={pageNumber}
+                        onClick={() => setCurrentPage(pageNumber)}
+                        className={currentPage === pageNumber ? "active" : ""}
+                      >
+                        {pageNumber}
+                      </button>
+                    )
+                  );
+                })}
+                <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+                  {">"}
+                </button>
+              </div>
+
+            </>
           )}
         </div>
       </div>
@@ -270,12 +322,15 @@ const Admin: React.FC = () => {
 
               <div className="user-box">
                 <input
-                  type="text"
+                  type="email"
                   className="form-input"
                   name="email"
                   value={editingUser.email}
                   onChange={(e) =>
-                    setEditingUser({ ...editingUser, email: e.target.value })
+                    setEditingUser({
+                      ...editingUser,
+                      email: e.target.value,
+                    })
                   }
                   required
                 />
@@ -289,11 +344,14 @@ const Admin: React.FC = () => {
                   name="phone"
                   value={editingUser.phone}
                   onChange={(e) =>
-                    setEditingUser({ ...editingUser, phone: e.target.value })
+                    setEditingUser({
+                      ...editingUser,
+                      phone: e.target.value,
+                    })
                   }
                   required
                 />
-                <label htmlFor="phone">Số điện thoại</label>
+                <label htmlFor="phone">Số Điện Thoại</label>
               </div>
 
               <div className="user-box">
@@ -303,78 +361,48 @@ const Admin: React.FC = () => {
                   name="username"
                   value={editingUser.username}
                   onChange={(e) =>
-                    setEditingUser({ ...editingUser, username: e.target.value })
+                    setEditingUser({
+                      ...editingUser,
+                      username: e.target.value,
+                    })
                   }
                   required
                 />
                 <label htmlFor="username">Tài khoản</label>
               </div>
-              <label>Vai trò</label>
-              <div className="user-box role-selector">
-                <div className="role-buttons">
-                  <button
-                    type="button"
-                    className={`role-button ${
-                      editingUser.role === "user" ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      setEditingUser({ ...editingUser, role: "user" })
-                    }
-                  >
-                    User
-                  </button>
-                  <button
-                    type="button"
-                    className={`role-button ${
-                      editingUser.role === "admin" ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      setEditingUser({ ...editingUser, role: "admin" })
-                    }
-                  >
-                    Admin
-                  </button>
-                </div>
+
+              <div className="user-box">
+                <input
+                  type="text"
+                  className="form-input"
+                  name="activate_key"
+                  value={editingUser.activate_key}
+                  onChange={(e) =>
+                    setEditingUser({
+                      ...editingUser,
+                      activate_key: e.target.value,
+                    })
+                  }
+                  required
+                />
+                <label htmlFor="activate_key">Mã kích hoạt</label>
               </div>
 
-              <button
-                type="submit"
-                id="register-button"
-                className="link-style-button"
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <button className="btn-login" type="submit">
                 Cập nhật
               </button>
             </form>
           </div>
         )}
       </ModalUpadate>
+
       <ModalDelete isOpen={isModalDeleteOpen} onClose={closeModalDelete}>
-        {editingUser && (
-          <div className="login-box">
-            <h2>Xoá Người Dùng</h2>
-            <p>Bạn có chắc chắn muốn xoá người dùng này không?</p>
-            <div className="button-group">
-              <button onClick={handleDelete} className="cyber-button-red">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Xoá
-              </button>
-              <button onClick={closeModalDelete} className="cyber-button-green">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Huỷ
-              </button>
-            </div>
-          </div>
-        )}
+        <div className="confirm-delete">
+          <h3>Bạn có chắc chắn muốn xoá người dùng?</h3>
+          <button className="btn btn-danger" onClick={handleDelete}>
+            Xoá
+          </button>
+        </div>
       </ModalDelete>
       <ToastContainer />
     </>

@@ -369,3 +369,42 @@ tr:hover {
 .button-group button{
     width: 10rem;
 }
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #00ced1;
+  border: 1px solid #00ced1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.pagination button:hover {
+  background: #03e9f4;
+  color: #fff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+  border: 1px solid #03e9f4;
+}
+
+.pagination button.active {
+  background: #03e9f4;
+  color: #444;
+  box-shadow: 0 0 5px #03e9f4, 0 0 0px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
+  border: 1px solid #03e9f4;
+}
+
+.pagination button:disabled {
+  display: none;
+}
+
