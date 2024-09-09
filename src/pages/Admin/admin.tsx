@@ -322,15 +322,12 @@ const Admin: React.FC = () => {
 
               <div className="user-box">
                 <input
-                  type="email"
+                  type="text"
                   className="form-input"
                   name="email"
                   value={editingUser.email}
                   onChange={(e) =>
-                    setEditingUser({
-                      ...editingUser,
-                      email: e.target.value,
-                    })
+                    setEditingUser({ ...editingUser, email: e.target.value })
                   }
                   required
                 />
@@ -344,14 +341,11 @@ const Admin: React.FC = () => {
                   name="phone"
                   value={editingUser.phone}
                   onChange={(e) =>
-                    setEditingUser({
-                      ...editingUser,
-                      phone: e.target.value,
-                    })
+                    setEditingUser({ ...editingUser, phone: e.target.value })
                   }
                   required
                 />
-                <label htmlFor="phone">Số Điện Thoại</label>
+                <label htmlFor="phone">Số điện thoại</label>
               </div>
 
               <div className="user-box">
@@ -361,50 +355,81 @@ const Admin: React.FC = () => {
                   name="username"
                   value={editingUser.username}
                   onChange={(e) =>
-                    setEditingUser({
-                      ...editingUser,
-                      username: e.target.value,
-                    })
+                    setEditingUser({ ...editingUser, username: e.target.value })
                   }
                   required
                 />
                 <label htmlFor="username">Tài khoản</label>
               </div>
-
-              <div className="user-box">
-                <input
-                  type="text"
-                  className="form-input"
-                  name="activate_key"
-                  value={editingUser.activate_key}
-                  onChange={(e) =>
-                    setEditingUser({
-                      ...editingUser,
-                      activate_key: e.target.value,
-                    })
-                  }
-                  required
-                />
-                <label htmlFor="activate_key">Mã kích hoạt</label>
+              <label>Vai trò</label>
+              <div className="user-box role-selector">
+                <div className="role-buttons">
+                  <button
+                    type="button"
+                    className={`role-button ${
+                      editingUser.role === "user" ? "active" : ""
+                    }`}
+                    onClick={() =>
+                      setEditingUser({ ...editingUser, role: "user" })
+                    }
+                  >
+                    User
+                  </button>
+                  <button
+                    type="button"
+                    className={`role-button ${
+                      editingUser.role === "admin" ? "active" : ""
+                    }`}
+                    onClick={() =>
+                      setEditingUser({ ...editingUser, role: "admin" })
+                    }
+                  >
+                    Admin
+                  </button>
+                </div>
               </div>
 
-              <button className="btn-login" type="submit">
+              <button
+                type="submit"
+                id="register-button"
+                className="link-style-button"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Cập nhật
               </button>
             </form>
           </div>
         )}
       </ModalUpadate>
-
       <ModalDelete isOpen={isModalDeleteOpen} onClose={closeModalDelete}>
-        <div className="confirm-delete">
-          <h3>Bạn có chắc chắn muốn xoá người dùng?</h3>
-          <button className="btn btn-danger" onClick={handleDelete}>
-            Xoá
-          </button>
-        </div>
+        {editingUser && (
+          <div className="login-box">
+            <h2>Xoá Người Dùng</h2>
+            <p>Bạn có chắc chắn muốn xoá người dùng này không?</p>
+            <div className="button-group">
+              <button onClick={handleDelete} className="cyber-button-red">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Xoá
+              </button>
+              <button onClick={closeModalDelete} className="cyber-button-green">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Huỷ
+              </button>
+            </div>
+          </div>
+        )}
       </ModalDelete>
-      <ToastContainer />
+
+      <ToastContainer/>
     </>
   );
 };
